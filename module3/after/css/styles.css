@@ -176,11 +176,8 @@ button {
   opacity: .6;
   border-radius: 10px 10px 0px 0px;
 }
-.visible-xxs {
-	display: none!important;
-}
- /* END HOME PAGE */
-}
+
+/* END HOME PAGE *
 
 /* FOOTER */
 .panel-footer {
@@ -472,17 +469,14 @@ h3.menu-item-title {
   /* End Header */
 
    /* Home Page */
-
-  .container .jumbotron {
-    background: url('../images/jumbotron_768.jpg') no-repeat;
+ .container .jumbotron {
     margin-top: 30px;
     padding: 0;
-    height: 432px;
-}
-.visible-xxs {
-	display: block!important;
-}
- 
+  }
+  .jumbotron img {
+  
+  	width: 100%;
+  }
   #menu-tile, #specials-tile {
   	width: 360px; 
   	margin: 0 auto 15px;
@@ -529,15 +523,7 @@ h3.menu-item-title {
     width: 280px;
     margin: 0 auto 15px;
   }
-   .container .jumbotron {
-    background: url('../images/jumbotron_768.jpg') no-repeat;
-    margin-top: 30px;
-    padding: 0;
-    height: 432px;
-}
-.visible-xxs {
-	display: block!important;
-}
+
   /* End Home Page */
 
   /* Footer */
