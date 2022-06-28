@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Personal Blog Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  
+  <div id="header">
+    <a href="index.html" class="back round">&#8249;</a>
+    <h1 class="postheader">My Ireland Diary</h1>
+    <p class="subheader">By Na An, Posted June 7, 2022</p>
+  </div>
+
+  
+  <div id="navContainer">
+
+    <div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Places
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Ireland</a>
+        <a href="#">Iceland</a>
+        <a href="#">Netherland</a>
+        <a href="#">Switzerland</a>
+      </div>
+    </div> 
+    <a href="#about">About</a>
+    </div><!-- end of navbar -->
+  </div><!-- end of navContainer -->
+
+  <div id="blogContainer">
+    <img class="blogimg" src="images/Ireland.jpg" alt="Ireland" width="100%">
+    <blockquote cite="https://en.wikipedia.org/wiki/Ireland">
+      Ireland is an island in the North Atlantic Ocean, in north-western Europe.
+    </blockquote>
+    <div id="blogcontent">
+      <p class="blogpage">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit amet mauris. Augue mauris augue neque gravida in fermentum et. Non pulvinar neque laoreet suspendisse. Odio morbi quis commodo odio aenean sed. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Congue quisque egestas diam in arcu cursus euismod quis. Eget nunc scelerisque viverra mauris in aliquam. Aliquet lectus proin nibh nisl condimentum id venenatis a. In fermentum posuere urna nec tincidunt praesent semper feugiat. Risus ultricies tristique nulla aliquet enim tortor at. In pellentesque massa placerat duis ultricies lacus sed. Mi eget mauris pharetra et ultrices neque ornare aenean. Sed sed risus pretium quam vulputate dignissim suspendisse in. Risus nec feugiat in fermentum posuere urna nec tincidunt.</p>
+      <h3>Travel Interests</h3>
+      <p class="blogpage">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit amet mauris. Augue mauris augue neque gravida in fermentum et. Non pulvinar neque laoreet suspendisse. Odio morbi quis commodo odio aenean sed. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Congue quisque egestas diam in arcu cursus euismod quis. Eget nunc scelerisque viverra mauris in aliquam. Aliquet lectus proin nibh nisl condimentum id venenatis a. In fermentum posuere urna nec tincidunt praesent semper feugiat. Risus ultricies tristique nulla aliquet enim tortor at. In pellentesque massa placerat duis ultricies lacus sed. Mi eget mauris pharetra et ultrices neque ornare aenean. Sed sed risus pretium quam vulputate dignissim suspendisse in. Risus nec feugiat in fermentum posuere urna nec tincidunt.</p>
+    
+      <h3>Travel Advices</h3>
+      <p class="blogpage">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit amet mauris. Augue mauris augue neque gravida in fermentum et. Non pulvinar neque laoreet suspendisse. Odio morbi quis commodo odio aenean sed. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Congue quisque egestas diam in arcu cursus euismod quis. Eget nunc scelerisque viverra mauris in aliquam. Aliquet lectus proin nibh nisl condimentum id venenatis a. In fermentum posuere urna nec tincidunt praesent semper feugiat. Risus ultricies tristique nulla aliquet enim tortor at. In pellentesque massa placerat duis ultricies lacus sed. Mi eget mauris pharetra et ultrices neque ornare aenean. Sed sed risus pretium quam vulputate dignissim suspendisse in. Risus nec feugiat in fermentum posuere urna nec tincidunt.</p>
+    </div>
+    <div class="previouspage"><p class="previous"><u>PREVIOUS</u></p>
+      <span class="preicon">&#8249; </span><span>Lorem ipsum dolor sit amet</span>
+    </div>
+    <div class="nextpage"><p class="next"><u>NEXT</u></p>
+      <span>Lorem ipsum dolor sit amet</span><span class="nexticon">&#8250;</span>
+    </div>
+    
+    <hr>
+  <div id="reply">
+    <h3 class="reply">Leave a Reply</h3>
+    <p>Your email address will not be published. Required fields are marked *</p>
+    <form action="/action_page.php">
+    <p class="comment-form_comment">
+      <textarea id="comment" class="comment-form_field" name="comment" placeholder="Comments *" aria-required="true" required="required"></textarea>
+    </p>
+    <p class="comment-form_author">
+      <input id="author" class="comment-form_field" name="author" type="text" placeholder="Name *" value size="30" aria-required="true" required="required">
+    </p>
+    <p class="comment-form_email">
+      <input id="email" class="comment-form_field" name="email" type="text" placeholder="E-mail *" value size="30" aria-describedby="email-notes" aria-required="true" required="required">
+    </p>
+    <p class="comment-form-cookies-consent">
+      <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+      <label for="wp-comment-cookies-consent">
+        "Save my name and email in this browser for the next time I comment."
+      </label>
+    </p>
+    <p class="comment-form-submit">
+      <input type="submit" value="Submit">
+    </p>
+  </div>
+  </form>
+  </div><!-- end of blogContainer -->
+
+    <footer>
+      <p>FOLLOW ME</p>
+      <a href="https://www.facebook.com/na.an.7315720/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/Anna0425csr" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/anna0425csr/?hl=en" class="fa fa-instagram"></a>
+    </footer>
+</body>
+</html>
+
