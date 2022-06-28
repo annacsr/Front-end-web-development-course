@@ -1,2 +1,2 @@
 # coursera
-Assignments of Coursera
+Front end projects
