@@ -1,2 +1,2 @@
-# coursera
+# udacity
 Front end projects
