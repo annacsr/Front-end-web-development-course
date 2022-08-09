@@ -116,7 +116,7 @@ h1 {
   margin: 0 auto;
 }
 
-.card {
+figure {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -164,7 +164,7 @@ figcaption {
     margin: 0;
     padding: 0;
   }
-  .card {
+ figure {
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -202,6 +202,7 @@ figcaption {
     display: grid;
     grid-template-columns: auto auto;
   }
+  
   .more {
     right: 40px;
     bottom: 2%;

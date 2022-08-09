@@ -25,13 +25,29 @@
 let sections = document.querySelectorAll('section');
 let list = document.getElementById('navbar__list');
 let timer = -1;
+const hamburger = document.querySelector('.hamburger');
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
+// Help check whether an element is in the viewport
+function isInViewport(elem) {
+    const box = elem.getBoundingClientRect();
+     return box.top >= 0 && box.left >= 0 && 
+            box.right <= (window.innerWidth || document.documentElement.clientWidth) && 
+            (box.bottom - 150) <= (window.innerHeight || document.documentElement.clientHeight);
+}
 
-
+// Help check if the user is in mobile view
+function isInMobileView (){
+    if(window.innerWidth <= 768) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -43,7 +59,8 @@ function createNav() {
     for (let i = 1; i <= sections.length; i++) {
         let item = document.createElement('li');
         item.classList.add(`section${i}`);
-        item.innerHTML = `<a href="#section${i}">Section ${i}</a>`;
+        item.classList.add('nav-item');
+        item.innerHTML = `<a href="#section${i}" class="nav-link">Section ${i}</a>`;
         list.appendChild(item);
     }
 }
@@ -58,8 +75,7 @@ btn.style.display = 'none';
 // Add class 'active' to section when near top of viewport
 function changeToActive() {
     for(const section of sections) {
-        let box = section.getBoundingClientRect();
-        if(box.top <= 150 && box.bottom >= 150) {
+        if(isInViewport(section)) {
             section.classList.add('your-active-class');
             document.querySelector(`.${section.id}`).classList.add('active');
             // Apply active state on the current section and the corresponding Nav link.
@@ -76,21 +92,29 @@ function scrollToSections(event) {
     event.preventDefault();
     const target = event.target.getAttribute('href');
     const destination = document.querySelector(target);
-    destination.scrollIntoView();
+    destination.scrollIntoView({
+        behavior: "smooth"
+    });
+    if(isInMobileView) {
+        hamburger.classList.remove("active");
+        list.classList.remove("active");
+    }
 }
 
 // Show fixed navigation when scrolling
 function Scrolling() {
-    document.getElementById('navbar__list').style.display = 'flex';
+    list.style.display = 'flex';
     if(timer !== -1) {
         clearTimeout(timer);
+    } 
+    if (!isInMobileView()) {
+        timer = setTimeout(scrollStopped, 3000);
     }
-    timer = setTimeout(scrollStopped, 2000);
 }
 
 // Hide fixed navigation when not scrolling
 function scrollStopped() {
-    document.getElementById('navbar__list').style.display = 'none';
+    list.style.display = 'none';
 }
 
 
@@ -108,6 +132,11 @@ function backToTop() {
     document.body.scrollTop = 0;
 }
 
+// show mobile nav 
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    list.classList.toggle("active");
+}
 
 /**
  * End Main Functions
@@ -116,11 +145,11 @@ function backToTop() {
 */
 
 // Build menu 
-document.addEventListener('DOMContentLoaded', function() {createNav();});
+document.addEventListener('DOMContentLoaded', createNav);
 // Scroll to section on link click
-document.querySelector('#navbar__list').addEventListener('click', function(event) {scrollToSections();});
+document.querySelector('#navbar__list').addEventListener('click', scrollToSections);
 // Set sections as active
-document.addEventListener('scroll', function(){changeToActive();});
+document.addEventListener('scroll', changeToActive);
 
 // Show fixed navigation bar while scrolling and hide while not scrolling 
 document.addEventListener('scroll', Scrolling);
@@ -129,3 +158,5 @@ document.addEventListener('scroll', Scrolling);
 document.addEventListener('scroll', showTopButton)
 // Goes back to top when clicking the 'top' button
 document.getElementById('btn').addEventListener('click', backToTop);
+// Toggle between active state of the hamburger menu when in mobile view
+hamburger.addEventListener("click", mobileMenu);
