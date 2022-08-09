@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald:wght@200;400&family=Oxygen:wght@300;400;700&display=swap');
+
+a.back {
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 16px;
+  margin: 50px 0 0 5%;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+a.back:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previouspage {
+  color:rgb(118, 118, 118);
+  margin-top: 50px;
+}
+.previous {
+  color: black;
+}
+.preicon {
+  padding-right: 10px;
+}
+.nextpage {
+  color:rgb(118, 118, 118);
+  margin-top: 50px;
+  text-align: right;
+}
+.next {
+  color: black;
+}
+.nexticon {
+  padding-left: 10px;
+}
+.round {
+  border-radius: 50%;
+}
+
+.subheader {
+  padding: 0 5%;
+}
+
+h1.postheader {
+  padding-top: 0;
+  margin-top: -50px;
+}
+#blogcontent {
+  margin-top: 50px;
+}
+.blogpage {
+  color:rgb(118, 118, 118);
+}
+
+#blogContainer {
+  margin: 0 auto;
+  width: 90vw;
+}
+.blogimg {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+hr {
+  color:rgb(118, 118, 118);
+  opacity: 0.5;
+}
+
+.reply {
+  color:rgb(118, 118, 118);
+}
+
+label {
+  font-size: 0.8em;
+  color:rgb(118, 118, 118);
+}
+textarea {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #49C5C4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #26dcdc;
+}
+
